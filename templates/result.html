@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parsed Resume</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Parsed Resume Data</h1>
+        {% if resume_id %}
+            <p>Resume ID: {{ resume_id }}</p>
+        {% else %}
+            <p>Resume ID: Not available</p>
+        {% endif %}
+        {% if filename %}
+            <p>Filename: {{ filename }}</p>
+        {% else %}
+            <p>Filename: Not available</p>
+        {% endif %}
+        {% if data.strip() != "{}" %}
+            <pre>{{ data }}</pre>
+        {% else %}
+            <p>No parsed data available. The resume could not be parsed. Please ensure the resume contains clear text and try again.</p>
+        {% endif %}
+        <a href="/">Upload another resume</a>
+    </div>
+</body>
+</html>

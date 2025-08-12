@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ name }} - Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .subsection {
+            margin-bottom: 10px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .contact {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .label {
+            font-weight: bold;
+        }
+
+        .entry-title {
+            font-weight: bold;
+        }
+
+        .entry-meta {
+            font-style: italic;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .skills, .education, .experience, .projects {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>{{ name }}</h1>
+        <div class="contact">
+            <p>Email: {{ email }} | Phone: {{ phone }}</p>
+            {% if linkedin %}<p>LinkedIn: {{ linkedin }}</p>{% endif %}
+            {% if github %}<p>GitHub: {{ github }}</p>{% endif %}
+        </div>
+    </div>
+
+    <div class="section skills">
+        <h2>Skills</h2>
+        <ul>
+            {% for skill in skills %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="section education">
+        <h2>Education</h2>
+        {% for edu in education %}
+            <div class="subsection">
+                <p class="entry-title">{{ edu.degree }} - {{ edu.institution }}</p>
+                <p class="entry-meta">{{ edu.start_year }} - {{ edu.end_year }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="section experience">
+        <h2>Experience</h2>
+        {% for job in experience %}
+            <div class="subsection">
+                <p class="entry-title">{{ job.title }} - {{ job.company }}</p>
+                <p class="entry-meta">{{ job.start_date }} - {{ job.end_date }}</p>
+                <ul>
+                    {% for point in job.responsibilities %}
+                        <li>{{ point }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="section projects">
+        <h2>Projects</h2>
+        {% for project in projects %}
+            <div class="subsection">
+                <p class="entry-title">{{ project.name }}</p>
+                <p>{{ project.description }}</p>
+                {% if project.link %}<p><a href="{{ project.link }}">{{ project.link }}</a></p>{% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

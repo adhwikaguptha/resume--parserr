@@ -1,0 +1,38 @@
+John  Doe                                     
+                                                                                  
+                              Email: john.doe@example.com                         
+                                                                                  
+                      Address: 123 Main St, San Francisco, CA, California         
+                                                                                  
+                                                                                  
+                                                                                  
+    Education                                                                     
+                                                                                  
+                                                                                  
+    MIT, BS Computer Science, 2018-2022                                           
+                                                                                  
+                                                                                  
+                                                                                  
+    Skills                                                                        
+                                                                                  
+    Python, JavaScript, Communication                                             
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+    Technical Skills                                                              
+                                                                                  
+    SQL, Docker                                                                   
+                                                                                  
+                                                                                  
+                                                                                  
+    Experience                                                                    
+                                                                                  
+    Tech Corp, Software Engineer, 2022-Present                                    
+                                                                                  
+                                                                                  
+                                                                                  
+                                                                                  
+    Certifications                                                                
+                                                                                  
+    AWS  Certified Developer
